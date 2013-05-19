@@ -1,3 +1,12 @@
+GIT
+  remote: http://github.com/pengwynn/linkedin.git
+  revision: e55ebfcb81864da5c6abcbb759468a8f0eee76a2
+  branch: 2-0-stable
+  specs:
+    linkedin (0.2.2)
+      nokogiri (~> 1.5.0)
+      oauth (~> 0.4.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -68,6 +77,7 @@ GEM
     mime-types (1.23)
     multi_json (1.7.3)
     multipart-post (1.2.0)
+    nokogiri (1.5.9)
     oauth (0.4.7)
     oauth2 (0.8.1)
       faraday (~> 0.8)
@@ -152,6 +162,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   jquery-rails
+  linkedin!
   omniauth
   omniauth-facebook
   omniauth-github
