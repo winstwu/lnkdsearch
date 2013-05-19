@@ -10,3 +10,8 @@
             <%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
      
 </p>
+<%= debug(session[:token]) if Rails.env.development? %>
+<%= debug(session[:secret]) if Rails.env.development? %>
+<%= debug(session[:usertest]) if Rails.env.development? %>
+
+
