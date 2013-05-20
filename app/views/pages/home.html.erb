@@ -1,20 +1,23 @@
 <h1>Business contacts you should know</h1>
 <h2>Find Linkedin connections with the most mutual friends</h2>
 <p>
+	<% if user_signed_in? %>
+	<ol><%= link_to "search", 'http://api.linkedin.com/v1/people-search' %></ol>
+	<% else %>
   How it works:
   <ol>1. Login with Linkedin</ol>
   <ol>2. Approve app request</ol>
   <ol>3. View results</ol>
-  <ol><%= link_to "Get Started!", '#' %></ol>
+ 	<ol><%= link_to 'Linkedin Signin',  user_omniauth_authorize_path(:linkedin) %></ol>
+  <% end %>
 
-  <%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
-     
+  
 </p>
-<%= link_to "search", 'http://api.linkedin.com/v1/people-search' %>
+
 
 <%= debug(session[:token]) if Rails.env.development? %>
 <%= debug(session[:secret]) if Rails.env.development? %>
+<%= debug(session[:pin]) if Rails.env.development? %>
 <%= debug(session[:usertest]) if Rails.env.development? %>
-<%= debug(session[:request]) if Rails.env.development? %>
 
 
